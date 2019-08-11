@@ -1,0 +1,13 @@
+npm start  //para iniciar el servidor de npmm
+expo start --tunnel  //en caso de que la aplicacion de expo tenga error
+
+==================================
+SI TENEMOS ERROR AL utilizar "require()"
+
+npm add @babel/runtime
+npm install
+
+===================================
+Esto es para las navegaciones
+
+npm install react-navigation

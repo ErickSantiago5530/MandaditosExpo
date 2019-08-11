@@ -1,18 +1,24 @@
+'use strict';
 import React ,{ Component } from 'react';
-import { AppRegistry,StyleSheet, Text, View } from 'react-native';
-
+import { FlatList,StyleSheet, Text, View} from 'react-native';
 // const Login = require('./src/components/loginView');
 // const Dashboard = require('./src/components/dashboardView');
+import Login from './src/components/loginView';
+import Dashboard from './src/components/dashboardView';
 
 
-export default function App() {
-  return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <Text>Eres una frijolin</Text>
-    </View>
-  );
+export default class App extends Component {
+  
+  render() {
+    return (
+      <View style={styles.app}>
+        {/* <Text>Hello, world!</Text>   */}
+        <Login /> 
+      </View>
+    );
+  }
 }
+
 
 const styles = StyleSheet.create({
   container: {
@@ -20,5 +26,15 @@ const styles = StyleSheet.create({
     backgroundColor: '#fff',
     alignItems: 'center',
     justifyContent: 'center',
+  },
+  app:{
+    flex: 1, 
+    // justifyContent: "center", 
+    // alignItems: "center"
+  },
+  item: {
+    padding: 10,
+    fontSize: 18,
+    height: 44,
   },
 });
