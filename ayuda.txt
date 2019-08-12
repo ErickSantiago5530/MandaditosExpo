@@ -10,4 +10,17 @@ npm install
 ===================================
 Esto es para las navegaciones
 
-npm install react-navigation
+npm install react-navigation --save
+npm i react-native-vector-icons --save
+=======================================
+error 500
+expo install react-native-gesture-handler
+
+
+
+-libreria react navigator
+expo install react-native-gesture-handler 
+react-native-reanimated
+
+npm i --save react-native-router-flux
+=======================================

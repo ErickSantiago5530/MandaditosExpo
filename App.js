@@ -1,40 +1,69 @@
 'use strict';
 import React ,{ Component } from 'react';
-import { FlatList,StyleSheet, Text, View} from 'react-native';
-// const Login = require('./src/components/loginView');
-// const Dashboard = require('./src/components/dashboardView');
+import { StyleSheet, View,Text,Button } from 'react-native';
+
+
+import Feed from './src/components/feedView';
 import Login from './src/components/loginView';
 import Dashboard from './src/components/dashboardView';
+// import drawerRaiz from './src/components/drawerRaiz';
+
+import { createStackNavigator, createAppContainer,createBottomTabNavigator,DrawerNavigator } from "react-navigation";
+import Icon from 'react-native-vector-icons/Ionicons';
 
 
-export default class App extends Component {
-  
+const AppNavigator = createStackNavigator(
+  {
+    Login: Login,
+    Dashboard: Dashboard,
+    Feed:Feed,
+  },
+  {
+    initialRouteName: "Dashboard",
+    defaultNavigationOptions: {
+      headerStyle: {
+        backgroundColor: '#f4511e',
+      },
+      headerLeft: (
+        <Icon  name='md-menu' size={35} onPress={() => alert('This is a button!')}/>
+        // <Button
+        //   onPress={alertAlgo()}
+        //   title="Info"
+        //   color="#fff"
+        //   />
+      ),
+      headerTintColor: '#fff',
+      headerTitleStyle: {
+        fontWeight: 'bold',
+      },
+    },
+    navigationOptions: {
+      tabBarLabel: 'Dashboard!',
+    },    
+  }
+);
+
+const styles = StyleSheet.create({
+  icon: {
+    marginHorizontal:4
+  }
+});
+
+const Tabs = createBottomTabNavigator({ AppNavigator });
+const AppContainer = createAppContainer(AppNavigator);
+
+export default class App extends React.Component {
+  static navigationOptions = {
+    drawerLabel: 'Dashboard',
+    
+  };
   render() {
-    return (
-      <View style={styles.app}>
-        {/* <Text>Hello, world!</Text>   */}
-        <Login /> 
-      </View>
-    );
+    return <AppContainer />;
+  }
+  alertAlgo(){
+    // this.props.navigation.openDrawer();
+    () => alert('This is a button!')
   }
 }
 
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  app:{
-    flex: 1, 
-    // justifyContent: "center", 
-    // alignItems: "center"
-  },
-  item: {
-    padding: 10,
-    fontSize: 18,
-    height: 44,
-  },
-});

@@ -3,7 +3,7 @@
 import React,{Component} from 'react'
 import {View,TextInput,StyleSheet,Image,TouchableOpacity,Text,StatusBar} from 'react-native';
 
-export default class loginFormView extends Component {
+export default class loginFormView extends React.Component {
   render() {
     return (
       <View style={styles.container}>
@@ -21,7 +21,7 @@ export default class loginFormView extends Component {
   }
 
   onLogin(){
-    console.log('entrando homi :)')
+    ()=> this.props.navigation.push('Dashboard');
   }
 }
 

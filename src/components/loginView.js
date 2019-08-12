@@ -20,6 +20,10 @@ export default class loginView extends Component {
                 <View style={styles.formContainer}>
                     <LoginForm/>
                 </View>
+                <View style={styles.signuptextCont} >
+                    <Text style={styles.signuptext}>Crear Cuenta. </Text>
+                    <Text style={styles.signupButton}> SignUp</Text>
+                </View>
             </View>
         </KeyboardAvoidingView>
     );
@@ -48,7 +52,20 @@ const styles = StyleSheet.create({
         width:100,
         height:100
     },
-    formContainer:{
-
+    signuptextCont:{
+        flexGrow:1,
+        alignItems: 'center',
+        justifyContent:'center',
+        paddingVertical:16,
+        flexDirection:'row'
+    },
+    signupText:{
+        color:'rgba(255,255,255,0.7)',
+        fontSize:16
+    },
+    signupButton:{
+        color:"#ffffff",
+        fontSize:16,
+        fontWeight:'500'
     }
   });
