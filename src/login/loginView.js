@@ -6,7 +6,7 @@ import {View,Text,StyleSheet,Image,KeyboardAvoidingView} from 'react-native';
 
 // import img from '../../images/images.png';
 // const logo = require('../../images/images.png');
-import LoginForm from '../../src/components/loginFormView';
+import LoginForm from '../../src/login/loginFormView';
 
 export default class loginView extends Component {
   render() {

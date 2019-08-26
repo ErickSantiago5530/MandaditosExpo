@@ -4,13 +4,13 @@
 import React,{Component} from 'react'
 import {View,Text,Button} from 'react-native';
 
-export default class dashboardView extends Component {
-  static navigationOptions = {
-    title: 'Dashboard',
-  };
+import MenuButton from '../components/MenuButton'
+
+export default class dashboardView extends Component {  
   render() {
     return (
       <View style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>
+        <MenuButton navigation={this.props.navigation}/>
         <Text>Hello, Dashboard!</Text>
         <Button
           title="Go to Login... again"
@@ -28,6 +28,3 @@ export default class dashboardView extends Component {
     );
   }
 }
-
-// module.exports = dashboardView;
-// export default dashboardView;
