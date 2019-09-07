@@ -24,3 +24,10 @@ react-native-reanimated
 
 npm i --save react-native-router-flux
 =======================================
+
+
+Maps isntalaciones
+========================================
+expo install expo-permissions
+expo install react-native-maps
+expo install expo-location

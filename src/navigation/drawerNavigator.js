@@ -9,6 +9,7 @@ import configuracionnegocio from '../screens/ConfiguracionNegocio'
 import configuracionperfil from '../screens/ConfiguracionPerfil'
 import formaspago from '../screens/FormasPago'
 import historialproductos from '../screens/HistorialProductos'
+import mapas from '../screens/MapScreen'
 
 import MenuDrawer from '../components/MenuDrawer'
 
@@ -34,8 +35,9 @@ const DrawerNavigator = createDrawerNavigator(
             screen:formaspago
         },historialproductos:{
             screen:historialproductos
-        }   
-
+        },map:{
+            screen:mapas
+        }
     },
     DrawerConfig
 );

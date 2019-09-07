@@ -28,12 +28,14 @@ export default class MenuDrawer extends React.Component{
                         </View>
                     </View>
                     <View style={styles.buttonLinks}>
+                        
                         {this.navLink('Inicio','Dashboard')}
                         {this.navLink('configuracionnegocio','Vincular Negocio')}
                         {this.navLink('configuracionperfil','Editar Perfil')}
                         {this.navLink('formaspago','Formas de Pago')}
                         {this.navLink('historialproductos','Historial de Productos')}
                         {this.navLink('centroayuda','Centro Ayuda')}
+                        {this.navLink('map','Mapa')}
                     </View>
                 </ScrollView>
                 <View style={styles.footer}>
