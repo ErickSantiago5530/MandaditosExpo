@@ -1,6 +1,9 @@
 npm start  //para iniciar el servidor de npmm
 expo start --tunnel  //en caso de que la aplicacion de expo tenga error
 
+DESINSTALAR COMPONENTES npm
+
+npm uninstall sax --global
 ==================================
 SI TENEMOS ERROR AL utilizar "require()"
 
@@ -31,3 +34,7 @@ Maps isntalaciones
 expo install expo-permissions
 expo install react-native-maps
 expo install expo-location
+
+DASHBOARD isntalaciones
+========================================
+npm i react-native-dashboard

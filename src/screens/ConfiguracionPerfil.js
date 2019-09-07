@@ -6,7 +6,7 @@ import {View,Text} from 'react-native';
 
 import MenuButton from '../components/MenuButton'
 
-export default class dashboardView extends Component {  
+export default class ConfiguracionPerfil extends Component {  
   render() {
     return (
       <View style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>

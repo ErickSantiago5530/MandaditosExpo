@@ -20,7 +20,7 @@ export const BotonDestino = function(props){
                 <Text style={styles.textcenterCol}>Hacia donde va a ir?</Text>
             </View>
             <View style={styles.rightCol}>
-                <Ionicons name="md-car" color="#000000" size={25} style={{ alignSelf:'center'}}/>
+                {/* <Ionicons name="md-car" color="#000000" size={25} style={{ alignSelf:'center'}}/> */}
             </View>
         </TouchableOpacity>
     )
@@ -49,11 +49,13 @@ const styles = StyleSheet.create({
     },
     centerCol:{
         flex:1,
-    },rightCol:{
+    },
+    rightCol:{
         flex:1,
         borderLeftWidth:1,
         borderColor:'#ededed',
-    },textcenterCol:{
+    },
+    textcenterCol:{
         fontFamily:'sans-serif-thin',
         fontSize:21,
         color:'#545454'
